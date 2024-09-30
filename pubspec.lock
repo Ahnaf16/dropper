@@ -874,6 +874,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.8.22"
+  super_context_menu:
+    dependency: "direct main"
+    description:
+      name: super_context_menu
+      sha256: "4fd05200177cc154a4dcd9f8468f652d77dedecc50088f60ec3ac34be001439a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.22"
   super_drag_and_drop:
     dependency: "direct main"
     description:

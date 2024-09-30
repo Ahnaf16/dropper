@@ -27,6 +27,7 @@ dependencies:
   hugeicons: ^0.0.7
   uuid: ^4.5.1
   super_clipboard: ^0.8.22
+  super_context_menu: ^0.8.22
 
 dev_dependencies:
   flutter_test:
