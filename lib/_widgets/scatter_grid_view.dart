@@ -14,8 +14,7 @@ class ScatterGridView extends StatelessWidget {
   final List<ScatterItem<XFile>> items;
   final Widget? emptyWidget;
   final bool isExpanded;
-  final Widget Function(
-      BuildContext context, ScatterItem<XFile> item, int index) builder;
+  final Widget Function(BuildContext context, ScatterItem<XFile> item, int index) builder;
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +62,7 @@ class ScatterGridView extends StatelessWidget {
     );
   }
 
-  Alignment _convertOffsetToAlignment(
-      Offset offset, BoxConstraints constraints) {
+  Alignment _convertOffsetToAlignment(Offset offset, BoxConstraints constraints) {
     double normalizedX = (offset.dx / (constraints.maxWidth / 2));
     double normalizedY = (offset.dy / (constraints.maxHeight / 2));
 
