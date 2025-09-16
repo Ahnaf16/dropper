@@ -6,7 +6,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   flutter_acrylic
   hotkey_system
   irondash_engine_context
-  screen_retriever
+  screen_retriever_windows
   super_native_extensions
   tray_manager
   window_manager

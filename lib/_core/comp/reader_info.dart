@@ -12,7 +12,7 @@ void processReaders(
 ) {
   final widgets = Future.wait(readers.map((e) => _getUris(e)));
   widgets.then((value) {
-    final uris = value.whereNotNull().toList();
+    final uris = value.nonNulls.toList();
     final files = uris.map((e) => e.toXFile).toList();
     onProcess(files);
   });

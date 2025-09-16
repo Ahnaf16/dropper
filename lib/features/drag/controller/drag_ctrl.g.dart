@@ -6,20 +6,59 @@ part of 'drag_ctrl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$dragCtrlHash() => r'bf40de2c878137eea48ffa663df41ff02c1f8ec2';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [DragCtrl].
 @ProviderFor(DragCtrl)
-final dragCtrlProvider =
-    AutoDisposeNotifierProvider<DragCtrl, List<ScatterItem<XFile>>>.internal(
-  DragCtrl.new,
-  name: r'dragCtrlProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$dragCtrlHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const dragCtrlProvider = DragCtrlProvider._();
 
-typedef _$DragCtrl = AutoDisposeNotifier<List<ScatterItem<XFile>>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class DragCtrlProvider
+    extends $NotifierProvider<DragCtrl, List<ScatterItem<XFile>>> {
+  const DragCtrlProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'dragCtrlProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$dragCtrlHash();
+
+  @$internal
+  @override
+  DragCtrl create() => DragCtrl();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<ScatterItem<XFile>> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<ScatterItem<XFile>>>(value),
+    );
+  }
+}
+
+String _$dragCtrlHash() => r'e9f8e5ced1856cfd629bc7ba92988edcc2e409c9';
+
+abstract class _$DragCtrl extends $Notifier<List<ScatterItem<XFile>>> {
+  List<ScatterItem<XFile>> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref =
+        this.ref as $Ref<List<ScatterItem<XFile>>, List<ScatterItem<XFile>>>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<List<ScatterItem<XFile>>, List<ScatterItem<XFile>>>,
+              List<ScatterItem<XFile>>,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}
