@@ -36,25 +36,14 @@ class DragView extends HookConsumerWidget {
               child: Row(
                 children: [
                   const Gap(10),
-                  Icon(
-                    Icons.keyboard_arrow_down_rounded,
-                    color: context.colors.onSecondary,
-                  ),
+                  Icon(Icons.keyboard_arrow_down_rounded, color: context.colors.onSecondary),
                   const Gap(10),
                   Text(
-                    dragFiles.length == 1
-                        ? dragFiles.first.item.name
-                        : '${dragFiles.length} files',
-                    style: context.textTheme.labelLarge!
-                        .textColor(context.colors.onSecondary),
+                    dragFiles.length == 1 ? dragFiles.first.item.name : '${dragFiles.length} files',
+                    style: context.textTheme.labelLarge!.textColor(context.colors.onSecondary),
                   ),
                 ],
-              )
-                  .decorated(
-                    borderRadius: BorderRadius.circular(20),
-                    color: context.colors.secondary,
-                  )
-                  .padding(all: 10),
+              ).decorated(borderRadius: BorderRadius.circular(20), color: context.colors.secondary).padding(all: 10),
             ),
       child: DropRegion(
         formats: Formats.standardFormats,
@@ -79,6 +68,7 @@ class DragView extends HookConsumerWidget {
 
           dragCtrl().addFromDropItem(items);
         },
+
         onDropLeave: (_) => isDragOver.value = false,
         onDropEnded: (_) => isDragOver.value = false,
         child: AnimatedContainer(
@@ -86,20 +76,13 @@ class DragView extends HookConsumerWidget {
           duration: kThemeAnimationDuration,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            border: isDragOver.value
-                ? Border.all(
-                    width: 3,
-                    color: context.colors.primary,
-                  )
-                : null,
+            border: isDragOver.value ? Border.all(width: 3, color: context.colors.primary) : null,
           ),
           alignment: Alignment.center,
           child: ScatterGridView(
             items: dragFiles,
             isExpanded: isExpanded.value,
-            emptyWidget: const Center(
-              child: Text('Drop Here'),
-            ),
+            emptyWidget: const Center(child: Text('Drop Here')),
             builder: (context, item, index) {
               return DragWidget(file: item);
             },

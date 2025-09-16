@@ -3,12 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 
 class LayoutPage extends StatelessWidget {
-  const LayoutPage({
-    super.key,
-    required this.child,
-    this.footer,
-    this.onClose,
-  });
+  const LayoutPage({super.key, required this.child, this.footer, this.onClose});
 
   final Widget child;
   final Widget? footer;
@@ -31,16 +26,10 @@ class LayoutPage extends StatelessWidget {
                         windowManager.close();
                       },
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: context.colors.error,
-                          shape: BoxShape.circle,
-                        ),
-                        padding: const EdgeInsets.all(2),
-                        alignment: Alignment.center,
-                        child: const Icon(
-                          Icons.close_rounded,
-                          size: 12,
-                        ),
+                        decoration: BoxDecoration(color: context.colors.error, shape: BoxShape.circle),
+                        padding: const EdgeInsets.all(4),
+                        height: 18,
+                        child: FittedBox(child: const Icon(Icons.close_rounded)),
                       ),
                     ),
                   ],
@@ -50,10 +39,7 @@ class LayoutPage extends StatelessWidget {
                     child: Container(
                       height: 3,
                       width: 50,
-                      decoration: BoxDecoration(
-                        color: context.colors.primary,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+                      decoration: BoxDecoration(color: context.colors.primary, borderRadius: BorderRadius.circular(10)),
                     ),
                   ),
                 ),
